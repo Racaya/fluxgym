@@ -328,10 +328,12 @@ def download(base_model):
     repo = model["repo"]
 
     # download unet
-    if base_model == "flux-dev" or base_model == "flux-schnell":
-        unet_folder = "models/unet"
-    else:
-        unet_folder = f"models/unet/{repo}"
+    #if base_model == "flux-dev" or base_model == "flux-schnell":
+     #   unet_folder = "models/unet"
+    #else:
+     #   unet_folder = f"models/unet/{repo}"
+
+    unet_folder = "models/unet"
     unet_path = os.path.join(unet_folder, model_file)
     if not os.path.exists(unet_path):
         os.makedirs(unet_folder, exist_ok=True)
