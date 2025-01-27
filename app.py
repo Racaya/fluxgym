@@ -442,10 +442,7 @@ def gen_sh(
     model_config = models[base_model]
     model_file = model_config["file"]
     repo = model_config["repo"]
-    if base_model == "flux-dev" or base_model == "flux-schnell":
-        model_folder = "models/unet"
-    else:
-        model_folder = f"models/unet/{repo}"
+    model_folder = "models/unet"
     model_path = os.path.join(model_folder, model_file)
     pretrained_model_path = resolve_path(model_path)
 
