@@ -1114,10 +1114,7 @@ with gr.Blocks(elem_id="app", theme=theme, css=css, fill_width=True) as demo:
     do_captioning.click(fn=run_captioning, inputs=[images, concept_sentence] + caption_list, outputs=caption_list)
     demo.load(fn=loaded, js=js, outputs=[hf_token, hf_login, hf_logout, repo_owner])
     refresh.click(update, inputs=listeners, outputs=[train_script, train_config, dataset_folder])
+    
 if __name__ == "__main__":
     cwd = os.path.dirname(os.path.abspath(__file__))
-    queue = demo.queue()
-    _, _, tunnel_adress = queue.launch(share=True, show_error=True)
-    print(tunnel_adress)
-    queue.block_thread()
-    # demo.launch(share=True, debug=True, show_error=True)
+    demo.launch(share=True, debug=True, show_error=True)
