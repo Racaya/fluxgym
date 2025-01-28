@@ -458,9 +458,8 @@ def gen_sh(
   --clip_l {clip_path} {line_break}
   --t5xxl {t5_path} {line_break}
   --ae {ae_path} {line_break}
-  --cache_latents_to_disk 0 {line_break}
   --save_model_as safetensors {line_break}
-  --sdpa --persistent_data_loader_workers 1 {line_break}
+  --sdpa --persistent_data_loader_workers {line_break}
   --max_data_loader_n_workers {workers} {line_break}
   --seed {seed} {line_break}
   --gradient_checkpointing {line_break}
